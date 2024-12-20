@@ -8,7 +8,7 @@ import { IoCall } from 'react-icons/io5'
 const Navbar = () => {
   return (
     <div className='w-full'>
-        <div className='bg-[#7E33E0] w-full'>
+        <div className='bg-[#7E33E0] w-full fixed z-[100]'>
             <div className='flex py-2 px-[4rem] text-white justify-between max-w-[1600px] mx-auto'>
                 <div className='flex items-center gap-[100px]'>
                     <div className='flex items-center gap-1 cursor-pointer'>
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
-        <div className='flex py-4 px-[4rem] justify-between max-w-[1600px] mx-auto'>
+        <div className='flex py-4 px-[4rem] justify-between max-w-[1600px] mx-auto pt-[3.5rem] relative z-[99] bg-white'>
             <div className='flex gap-[120px]'>
                 <a href="/" className='text-[20px] font-[700]'>Hekto</a>
                 <div className='font-[300] flex gap-7 items-center'>
