@@ -4,8 +4,12 @@ import { BsPhone } from 'react-icons/bs'
 import { MdMail } from 'react-icons/md'
 import { NavbarData } from '../../data/MockData'
 import { IoCall } from 'react-icons/io5'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+
+    const navigate = useNavigate()
+
   return (
     <div className='w-full'>
         <div className='bg-[#7E33E0] w-full fixed z-[100]'>
@@ -21,7 +25,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-[100px]'>
-                    <div className='flex items-center gap-1 cursor-pointer'>
+                    <div className='flex items-center gap-1 cursor-pointer' onClick={() => navigate('/login')}>
                         <p>Login</p>
                         <BiUser />
                     </div>

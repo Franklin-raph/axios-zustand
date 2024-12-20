@@ -202,3 +202,111 @@ export const Offers = [
         description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non neque eget."
     },
 ]
+
+export const TrendingProducts = [
+    {
+        id:1,
+        title:"Cantilever chair",
+        price:"39.99",
+        oldPrice: "39.99",
+        image:"/images/chair4.svg"
+    },
+    {
+        id:2,
+        title:"Cantilever chair",
+        price:"39.99",
+        oldPrice: "39.99",
+        image:"/images/chair9.png"
+    },
+    {
+        id:3,
+        title:"Cantilever chair",
+        price:"39.99",
+        oldPrice: "39.99",
+        image:"/images/chair10.png"
+    },
+    {
+        id:4,
+        title:"Cantilever chair",
+        price:"39.99",
+        oldPrice: "39.99",
+        image:"/images/chair5.png"
+    }
+]
+
+export const CategoriesLinks = [
+    {
+        id:1,
+        title:"Laptops & Computers",
+        link:'/'
+    },
+    {
+        id:2,
+        title:"Cameras & Photography",
+        link:'/'
+    },
+    {
+        id:3,
+        title:"Smart Phones & Tablets",
+        link:'/'
+    },
+    {
+        id:4,
+        title:"Video Games & Consoles",
+        link:'/'
+    },
+    {
+        id:5,
+        title:"Waterproof Headphones",
+        link:'/'
+    }
+]
+
+export const CustomerCareService = [
+    {
+        id:1,
+        title:"Customer Support",
+        link:'/'
+    },
+    {
+        id:2,
+        title:"My Account",
+        link:'/'
+    },
+    {
+        id:3,
+        title:"Return & Exchange",
+        link:'/'
+    },
+    {
+        id:4,
+        title:"Payment & Shipping",
+        link:'/'
+    },
+    {
+        id:5,
+        title:"Privacy & Cookies",
+        link:'/'
+    }
+]
+
+export const TrendingExtraProducts = [
+    {
+        id:1,
+        title:"Executive Seat chair",
+        price:"32.99",
+        image:"/images/chair13.png"
+    },
+    {
+        id:2,
+        title:"Executive Seat chair",
+        price:"59.99",
+        image:"/images/chair12.png"
+    },
+    {
+        id:3,
+        title:"Executive Seat chair",
+        price:"49.99",
+        image:"/images/chair11.png"
+    }
+]

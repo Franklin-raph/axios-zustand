@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { HeroData, FeaturedProducts, LatestProductTabHeaders, LatestProducts, Offers } from '../../data/MockData'
+import { HeroData, FeaturedProducts, LatestProductTabHeaders, LatestProducts, Offers, TrendingProducts, TrendingExtraProducts } from '../../data/MockData'
 import { SlideRight } from '../../utils/animation'
 import { motion, AnimatePresence, easeInOut } from "framer-motion"
 import FeaturedCard from '../../components/featured-card/FeaturedCard'
@@ -16,6 +16,9 @@ import { IoIosArrowForward } from 'react-icons/io'
 import { MdOutlineArrowBackIos } from 'react-icons/md'
 import LatestProductCard from '../../components/latest-product-card/LatestProductCard'
 import OfferCard from '../../components/offer-card/OfferCard'
+import TrendingProductsCard from '../../components/trending-products-card/TrendingProductsCard'
+import { Link } from 'react-router-dom'
+import TrendingProductsExtraCard from '../../components/trending-products-extra-card/TrendingProductsExtraCard'
 
 
 const Home = () => {
@@ -242,9 +245,62 @@ const Home = () => {
             </div>
         </section>
 
-        <section className='bg-[#F1F0FF]'>
-            <div className='max-w-[1200px] mx-auto px-10 md:px-0'>
-                <img src="/images/cushion.png" alt="" />
+        <section className='bg-[#F1F0FF] mt-[7rem]'>
+            <div className='max-w-[1200px] mx-auto px-10 md:px-0 flex items-center justify-center'>
+                <img src="/images/cushion.png" alt="" className='w-[400px]'/>
+                <div className='w-[450px]'>
+                    <h1 className='text-[#151875] text-[28px]'>Unique Features Of leatest & Trending Poducts</h1>
+                    <ul className='text-[#ACABC3] text-[14px] my-7'>
+                        <li className='flex items-center gap-2'> <span className='bg-[#F52B70] p-1 rounded-full'></span> All frames constructed with hardwood solids and laminates</li>
+                        <li className='flex items-center gap-2 my-2'> <span className='bg-[#2B2BF5] p-1 rounded-full'></span> Reinforced with double wood dowels, glue, screw - nails corner blocks and machine nails</li>
+                        <li className='flex items-center gap-2'> <span className='bg-[#2BF5CC] p-1 rounded-full'></span> Arms, backs and seats are structurally reinforced</li>
+                    </ul>
+                    <div className='flex items-center gap-3'>
+                        <button className='bg-[#FB2E86] text-white py-[9px] px-8 rounded-[2px]'>Add To Cart</button>
+                        <div className='text-[#151875] text-[14px]'>
+                            <p>B&B Italian Sofa</p>
+                            <p className='font-[300]'>$32.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section className='mt-[7rem] max-w-[1200px] mx-auto px-10 md:px-0'>
+            <h1 className='text-center text-[#1A0B5B] font-bold text-[40px]'>Trending Products</h1>
+            <div className='grid grid-cols-4 gap-5'>
+                {
+                    TrendingProducts.map(card => {
+                        return(
+                            <TrendingProductsCard card={card}/>
+                        )
+                    })
+                }
+            </div>
+            <div className='grid grid-cols-3 mt-6 gap-[4rem]'>
+                <div className='bg-[#FFF6FB] w-[400px] p-5'>
+                    <div>
+                        <h3 className='text-[#151875] text-[22px]'>23% off in all products</h3>
+                        <Link to="#" className='underline text-[#FB2E86]'>Shop Now</Link>
+                    </div>
+                    <img src="/images/clock.png" alt="" />
+                </div>
+                <div className='bg-[#EEEFFB] w-[400px] p-5'>
+                    <div>
+                        <h3 className='text-[#151875] text-[22px]'>23% off in all products</h3>
+                        <Link to="#" className='underline text-[#FB2E86]'>View Collection</Link>
+                    </div>
+                    <img src="/images/clock.png" alt="" />
+                </div>
+                <div className='grid gap-4'>
+                    {
+                        TrendingExtraProducts.map(item => {
+                            return (
+                                <TrendingProductsExtraCard item={item}/>
+                            )
+                        })
+                    }
+                </div>
             </div>
         </section>
     </div>
