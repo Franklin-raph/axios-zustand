@@ -19,7 +19,7 @@ import OfferCard from '../../components/offer-card/OfferCard'
 import TrendingProductsCard from '../../components/trending-products-card/TrendingProductsCard'
 import { Link } from 'react-router-dom'
 import TrendingProductsExtraCard from '../../components/trending-products-extra-card/TrendingProductsExtraCard'
-import TradingViewWidget from '../../components/TradingViewWidget'
+// import TradingViewWidget from '../../components/TradingViewWidget'
 
 
 
